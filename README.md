@@ -278,7 +278,7 @@ GET  /api/applications/:id
 
 ---
 
-# 🚀 Deployment
+# # 🚀 Deployment
 
 The application is deployed using cloud hosting services.
 
@@ -286,14 +286,12 @@ The application is deployed using cloud hosting services.
 
 Hosted on **Vercel**
 
- https://smart-hire-ats.vercel.app/
-```
+https://smart-hire-ats.vercel.app/
 
 ## Backend
 
 Hosted on **Render**
 
-```text
 https://smart-hire-ats-quin.onrender.com
 ```
 
