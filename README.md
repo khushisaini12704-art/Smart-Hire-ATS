@@ -10,9 +10,7 @@ The project demonstrates full-stack web development using React, Node.js, Expres
 
 ### Frontend – Vercel
 👉 **Live Application:**  
-YOUR_VERCEL_LIVE_URL:
 https://smart-hire-ats.vercel.app/
-
 
 ### Backend – Render
 👉 **Backend API:**  
@@ -237,6 +235,9 @@ For the deployed frontend, Vercel uses:
 
 ```env
 VITE_API_URL=https://smart-hire-ats-quin.onrender.com
+```
+
+> ⚠️ Never upload your real `.env` file, MongoDB password, or JWT secret to GitHub.
 
 ---
 
@@ -278,7 +279,7 @@ GET  /api/applications/:id
 
 ---
 
-# # 🚀 Deployment
+# 🚀 Deployment
 
 The application is deployed using cloud hosting services.
 
@@ -286,12 +287,15 @@ The application is deployed using cloud hosting services.
 
 Hosted on **Vercel**
 
+```text
 https://smart-hire-ats.vercel.app/
+```
 
 ## Backend
 
 Hosted on **Render**
 
+```text
 https://smart-hire-ats-quin.onrender.com
 ```
 
@@ -305,27 +309,27 @@ Hosted using **MongoDB Atlas**
 
 ## Home Page
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/c9c60d4e-f60f-4862-88f8-b115b77ab8b2" />
+<img width="500" height="400" alt="Screenshot 2026-08-09 111336" src="https://github.com/user-attachments/assets/a417942c-19c0-4173-af3e-b680f1248d00" />
 
 
 ## Applicant Page
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/5ce5225b-13e2-44da-bf61-b08c4f26da64" />
-
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/365c29c4-30a5-4361-9175-2fbaf4451d3c" />
 
 ## Dashboard
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/4b24a089-490a-411a-b1be-5df3530b9b6f" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/92a4e040-f545-4b50-98e2-5301bd9d910d" />
 
 
 ## Jobs Page
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9c5f3516-8ed3-4179-8cc1-4170d9e6ac45" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/2913b39b-d6fc-42d7-ad62-ece4e3176b61" />
 
 
 ## Recruiter Dashboard
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/66d71897-e57b-4713-ad97-942a6d849e13" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/543ffff6-7e71-4d99-adb6-c03e35c5685b" />
+
 
 ---
 
@@ -369,7 +373,7 @@ MongoDB Atlas
 
 The following links are provided for project submission:
 
-### 🌐 Live Application URL – Vercel
+### 🌐 Live Application URL – Vercel 
 
 https://smart-hire-ats.vercel.app/
 
@@ -400,12 +404,15 @@ Summer Internship: SmartHire ATS – MERN Stack Project
 ✅ MongoDB Atlas Connected  
 ✅ Backend Deployed on Render  
 ✅ Frontend Deployed on Vercel  
-✅ GitHub Repository Created  
+✅ GitHub Repository Created 
 
-## 📚Learning Resources
+📚 Learning Resources
+
 Special thanks to Mr. Hitesh for sharing helpful learning resources during my internship from Skill Flow Learn.
 Notes: https://github.com/HiteshCode-Projects/SkillFlowJune⁠
 
-## ⭐Support
+
+⭐ Support
+
 If you found this project helpful, please consider giving it a ⭐ on GitHub.
 It helps others discover the project and motivates future improvements.
