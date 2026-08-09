@@ -1,0 +1,2 @@
+exports.notFound=(req,res,next)=>{res.status(404);next(new Error(`Route not found: ${req.originalUrl}`));};
+exports.errorHandler=(err,req,res,next)=>{let status=res.statusCode===200?500:res.statusCode;let message=err.message||'Server error';if(err.code===11000){status=409;message='A record with these details already exists';}if(err.name==='CastError'){status=400;message='Invalid resource identifier';}res.status(status).json({message,...(process.env.NODE_ENV==='development'&&{stack:err.stack})});};

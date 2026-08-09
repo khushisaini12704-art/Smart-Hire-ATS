@@ -1,0 +1,3 @@
+const r=require('express').Router();const {body}=require('express-validator');const c=require('../controllers/authController');const validate=require('../middleware/validate');const {protect}=require('../middleware/auth');
+r.post('/register',[body('name').trim().isLength({min:2,max:80}),body('email').isEmail().normalizeEmail(),body('password').isStrongPassword({minLength:8,minLowercase:1,minUppercase:1,minNumbers:1,minSymbols:0})],validate,c.register);
+r.post('/login',[body('email').isEmail().normalizeEmail(),body('password').notEmpty()],validate,c.login);r.get('/me',protect,c.me);r.put('/profile',protect,[body('name').optional().trim().isLength({min:2,max:80})],validate,c.updateProfile);module.exports=r;
