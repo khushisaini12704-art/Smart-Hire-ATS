@@ -1,104 +1,403 @@
-# SmartHire – Applicant Tracking System
+# 🚀 SmartHire ATS
 
-SmartHire is a production-ready MERN applicant tracking system for recruiters. It includes JWT authentication, recruiter-only protected routes, job and applicant management, a hiring dashboard, PDF resume uploads, debounced search, filters, sorting, pagination, CSV export, optional email notifications, a recruiter profile, responsive design, and dark mode.
+SmartHire ATS is a full-stack **Applicant Tracking System (ATS)** built using the MERN stack. It helps recruiters manage job postings, candidates, and applications while allowing job seekers to create accounts, browse available jobs, and submit applications.
 
-## Technology
+The project demonstrates full-stack web development using React, Node.js, Express.js, MongoDB, authentication, REST APIs, and cloud deployment.
 
-- Frontend: React 19, TypeScript, Vite, React Router, Axios, CSS Grid/Flexbox
-- Backend: Node.js, Express, MongoDB/Mongoose, MVC architecture
-- Security: JWT, bcrypt, Helmet, CORS, rate limiting, validation and centralized errors
-- Deployment: Vercel frontend, Render backend, MongoDB Atlas database
+---
 
-## Project structure
+## 🌐 Live Application
+
+### Frontend – Vercel
+👉 **Live Application:**  
+YOUR_VERCEL_LIVE_URL:
+https://smart-hire-ats.vercel.app/
+
+
+### Backend – Render
+👉 **Backend API:**  
+https://smart-hire-ats-quin.onrender.com
+
+### Source Code – GitHub
+👉 **GitHub Repository:**  
+https://github.com/khushisaini12704-art/Smart-Hire-ATS
+
+---
+
+# 📖 Project Overview
+
+SmartHire ATS is designed to simplify the recruitment process.
+
+The application provides separate functionality for candidates and recruiters.
+
+Recruiters can manage job opportunities and applicants, while candidates can search for jobs and manage their applications.
+
+The frontend communicates with a REST API hosted on Render, while application data is stored securely using MongoDB Atlas.
+
+---
+
+# ✨ Features
+
+## 👤 User Features
+
+- User registration
+- Secure user login
+- JWT-based authentication
+- User profile management
+- Browse available jobs
+- View job details
+- Apply for jobs
+- View application status
+
+## 💼 Recruiter Features
+
+- Recruiter account support
+- Create job postings
+- Manage job postings
+- View applicants
+- Review candidate applications
+- Manage recruitment activities
+
+## 🔐 Security Features
+
+- Password hashing using bcrypt
+- JWT authentication
+- Protected API routes
+- Environment variables for sensitive information
+- CORS configuration
+- Secure MongoDB Atlas database connection
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Axios
+- React Router
+
+## Backend
+
+- Node.js
+- Express.js
+- REST API
+- JWT Authentication
+- bcryptjs
+
+## Database
+
+- MongoDB
+- MongoDB Atlas
+- Mongoose
+
+## Deployment
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+- **Version Control:** Git & GitHub
+
+---
+
+# 📁 Folder Structure
 
 ```text
-smarthire/
+Smart-Hire-ATS/
+│
 ├── backend/
-│   ├── config/ controllers/ middleware/ models/ routes/ utils/
-│   ├── uploads/
-│   ├── .env.example
-│   └── server.js
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
+│
 ├── frontend/
-│   ├── src/api components context hooks pages types/
-│   └── .env.example
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.jsx
+│   ├── public/
+│   ├── index.html
+│   └── package.json
+│
+├── .gitignore
+├── README.md
+├── package.json
 ├── render.yaml
 └── vercel.json
 ```
 
-## Run locally
+---
 
-Requirements: Node.js 20+, npm, and MongoDB (local or Atlas).
+# ⚙️ Installation Steps
+
+Follow these steps to run the project locally.
+
+## 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd smarthire
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
+git clone https://github.com/khushisaini12704-art/Smart-Hire-ATS.git
+```
+
+Move into the project:
+
+```bash
+cd Smart-Hire-ATS
+```
+
+---
+
+## 2. Backend Setup
+
+Move into the backend directory:
+
+```bash
+cd backend
+```
+
+Install dependencies:
+
+```bash
 npm install
-npm run install:all
+```
+
+Create a `.env` file inside the `backend` folder.
+
+Add the required environment variables.
+
+Start the backend:
+
+```bash
+npm start
+```
+
+The backend will run locally on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## 3. Frontend Setup
+
+Open another terminal and move into the frontend directory:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:5173`. The API runs at `http://localhost:5000`.
+The frontend will normally run on:
 
-Set `MONGO_URI` and a long random `JWT_SECRET` in `backend/.env`. Passwords require at least eight characters, uppercase, lowercase, and a number. Resume uploads accept PDF only, up to 5 MB.
-
-## Main API routes
-
-| Method | Route | Purpose |
-|---|---|---|
-| POST | `/api/auth/register` | Register recruiter |
-| POST | `/api/auth/login` | Login recruiter |
-| GET/PUT | `/api/auth/me`, `/api/auth/profile` | Read/update profile |
-| GET/POST | `/api/jobs` | Search/list/create jobs |
-| GET/PUT/DELETE | `/api/jobs/:id` | Manage one job |
-| GET/POST | `/api/applicants` | Search/list/add applicants |
-| PUT/DELETE | `/api/applicants/:id` | Update status/details or delete |
-| GET | `/api/applicants/export/csv` | Export filtered applicants |
-| GET | `/api/dashboard` | Recruitment analytics |
-
-All routes except register, login, and health require `Authorization: Bearer <token>`.
-
-## Optional email
-
-Add SMTP values to `backend/.env`. When configured, an applicant receives a status-change email. If SMTP is blank, the application continues normally without email.
-
-## Deploy
-
-### MongoDB Atlas
-
-1. Create a cluster, database user, and network access rule.
-2. Copy the connection URI into Render as `MONGO_URI`.
-
-### Render backend
-
-1. Create a Web Service from the repository or use `render.yaml`.
-2. Root directory: `backend`; build: `npm ci`; start: `npm start`.
-3. Add `MONGO_URI`, `JWT_SECRET`, `CLIENT_URL`, and optional SMTP variables.
-4. Persistent resume storage should use an object-storage service for long-term production use; Render's local filesystem is ephemeral.
-
-### Vercel frontend
-
-1. Import the repository. The root `vercel.json` builds `frontend`.
-2. Add `VITE_API_URL=https://your-render-service.onrender.com/api`.
-3. Put the Vercel site URL in Render's `CLIENT_URL`, then redeploy.
-
-## Professional Git workflow
-
-```bash
-git checkout -b feature/authentication
-git add .
-git commit -m "feat: add secure recruiter authentication"
-git push -u origin feature/authentication
+```text
+http://localhost:5173
 ```
 
-Create a pull request, review it, merge into `main`, and repeat with focused branches such as `feature/job-management`, `feature/applicant-pipeline`, and `feature/dashboard`.
+---
 
-## Verification
+# 🔑 Environment Variables
 
-```bash
-npm run build
-npm --prefix frontend run lint
+Create a `.env` file inside the backend folder.
+
+Example:
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+JWT_EXPIRES_IN=7d
+
+CLIENT_URL=http://localhost:5173
 ```
 
-Never commit `.env`, uploaded resumes, database credentials, or JWT secrets.
+For the deployed frontend, Vercel uses:
+
+```env
+VITE_API_URL=https://smart-hire-ats-quin.onrender.com
+
+---
+
+# 🔌 API Documentation
+
+Base API URL:
+
+```text
+https://smart-hire-ats-quin.onrender.com
+```
+
+## Authentication APIs
+
+```text
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
+```
+
+## Job APIs
+
+```text
+GET    /api/jobs
+GET    /api/jobs/:id
+POST   /api/jobs
+PUT    /api/jobs/:id
+DELETE /api/jobs/:id
+```
+
+## Application APIs
+
+```text
+POST /api/applications
+GET  /api/applications
+GET  /api/applications/:id
+```
+
+> API endpoints may vary depending on the routes configured in the backend.
+
+---
+
+# 🚀 Deployment
+
+The application is deployed using cloud hosting services.
+
+## Frontend
+
+Hosted on **Vercel**
+
+ https://smart-hire-ats.vercel.app/
+```
+
+## Backend
+
+Hosted on **Render**
+
+```text
+https://smart-hire-ats-quin.onrender.com
+```
+
+## Database
+
+Hosted using **MongoDB Atlas**
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/c9c60d4e-f60f-4862-88f8-b115b77ab8b2" />
+
+
+## Applicant Page
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/5ce5225b-13e2-44da-bf61-b08c4f26da64" />
+
+
+## Dashboard
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/4b24a089-490a-411a-b1be-5df3530b9b6f" />
+
+
+## Jobs Page
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/9c5f3516-8ed3-4179-8cc1-4170d9e6ac45" />
+
+
+## Recruiter Dashboard
+
+<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/66d71897-e57b-4713-ad97-942a6d849e13" />
+
+---
+
+# 🧪 Testing
+
+The application was tested for:
+
+- User registration
+- User login
+- Authentication
+- Job browsing
+- Job creation
+- Job applications
+- Recruiter functionality
+- Frontend/backend communication
+- MongoDB database connectivity
+
+---
+
+# 📦 Deployment Architecture
+
+```text
+User
+  │
+  ▼
+Frontend
+Vercel
+  │
+  ▼
+Backend REST API
+Render
+  │
+  ▼
+Database
+MongoDB Atlas
+```
+
+---
+
+# 📤 Submission
+
+The following links are provided for project submission:
+
+### 🌐 Live Application URL – Vercel
+
+https://smart-hire-ats.vercel.app/
+
+### ⚙️ Backend API URL – Render
+
+https://smart-hire-ats-quin.onrender.com
+
+### 💻 GitHub Repository
+
+https://github.com/khushisaini12704-art/Smart-Hire-ATS
+
+---
+
+# 👩‍💻 Author
+
+**Khushi Saini**
+
+SmartHire ATS – MERN Stack Project
+
+---
+
+## ⭐ Project Status
+
+✅ Frontend Developed  
+✅ Backend Developed  
+✅ MongoDB Atlas Connected  
+✅ Backend Deployed on Render  
+✅ Frontend Deployed on Vercel  
+✅ GitHub Repository Created  
