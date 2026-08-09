@@ -307,27 +307,27 @@ Hosted using **MongoDB Atlas**
 
 ## Home Page
 
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/c9c60d4e-f60f-4862-88f8-b115b77ab8b2" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/c9c60d4e-f60f-4862-88f8-b115b77ab8b2" />
 
 
 ## Applicant Page
 
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/5ce5225b-13e2-44da-bf61-b08c4f26da64" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/5ce5225b-13e2-44da-bf61-b08c4f26da64" />
 
 
 ## Dashboard
 
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/4b24a089-490a-411a-b1be-5df3530b9b6f" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/4b24a089-490a-411a-b1be-5df3530b9b6f" />
 
 
 ## Jobs Page
 
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/9c5f3516-8ed3-4179-8cc1-4170d9e6ac45" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9c5f3516-8ed3-4179-8cc1-4170d9e6ac45" />
 
 
 ## Recruiter Dashboard
 
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/66d71897-e57b-4713-ad97-942a6d849e13" />
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/66d71897-e57b-4713-ad97-942a6d849e13" />
 
 ---
 
@@ -389,7 +389,9 @@ https://github.com/khushisaini12704-art/Smart-Hire-ATS
 
 **Khushi Saini**
 
-SmartHire ATS – MERN Stack Project
+B.Tech CSE Student
+
+Summer Internship: SmartHire ATS – MERN Stack Project
 
 ---
 
@@ -401,3 +403,11 @@ SmartHire ATS – MERN Stack Project
 ✅ Backend Deployed on Render  
 ✅ Frontend Deployed on Vercel  
 ✅ GitHub Repository Created  
+
+## 📚Learning Resources
+Special thanks to Mr. Hitesh for sharing helpful learning resources during my internship from Skill Flow Learn.
+Notes: https://github.com/HiteshCode-Projects/SkillFlowJune⁠
+
+## ⭐Support
+If you found this project helpful, please consider giving it a ⭐ on GitHub.
+It helps others discover the project and motivates future improvements.
